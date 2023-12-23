@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { Comfortaa } from 'next/font/google'
 import './styles/reset.css'
 import './globals.css'
+import { TopBar } from './components/TopBar'
 
 const comfortaa = Comfortaa({ subsets: ['latin'] })
 
@@ -17,7 +18,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-BR">
-      <body className={comfortaa.className}>{children}</body>
+      <body className={comfortaa.className}>
+        <TopBar />
+        {children}
+      </body>
     </html>
   )
 }
