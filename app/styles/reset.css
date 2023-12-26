@@ -48,6 +48,7 @@ span {
   text-wrap: balance;
   text-size-adjust: auto;
   overflow-wrap: break-word;
+  font-size: inherit;
 }
 
 a {

@@ -2,7 +2,7 @@
 export default function Home() {
   return (
     <>
-      <main>MAIN - main</main>
+      <main>HOME PAGE</main>
     </>
   )
 }

@@ -1,0 +1,96 @@
+.books__section {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-row-gap: 3rem;
+  justify-items: center;
+}
+
+.book__card {
+  width: 14.3rem;
+  height: 22rem;
+  background-color: var(--medium--gryffindor);
+  border-radius: .6rem .6rem 0 0;
+  position: relative;
+  transition: box-shadow .5s ease-in;
+}
+
+.book__card:hover {
+  box-shadow: 0 .1rem .4rem .0 var(--lightest--gryffindor);
+  transition: box-shadow .5s ease-in;
+}
+
+.book__image {
+  position: absolute;
+  border-radius: .6rem .6rem 0 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.book__image:hover {
+  opacity: 0;
+  transition: 
+    opacity 0.5s ease-out;
+}
+
+.book_content__card {
+  padding-inline: 1rem;
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.book_content__card h3 {
+  padding-inline: 1rem;
+  padding-block: 1rem;
+  font-size: 1.125rem;
+  border-block: 10px double rgba(255, 255, 255, 0.2);
+}
+
+.book_content__card h5 {
+  text-align: center;
+  margin-top: .8rem;
+  font-size: .8rem;
+}
+
+.book_content__card h5:last-child {
+  margin-top: 0;
+}
+
+.book__read_button {
+  width: 100%;
+  cursor: pointer;
+  border: none;
+  background-color: var(--lightest--gryffindor);
+  border-radius: 0 0 1rem 1rem;
+  position: absolute;
+  bottom: -1.6rem;
+}
+
+.book__read_button:hover {
+  box-shadow: 0 .1rem .4rem .0 var(--light--gryffindor);
+  transition: 
+    box-shadow .5s ease-in-out;
+}
+
+
+@media (min-width: 580px) {
+  .books__section {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
+  .books__section {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1160px) {
+  .books__section {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1700px) {
+  .books__section {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
