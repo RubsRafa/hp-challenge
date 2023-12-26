@@ -3,6 +3,7 @@ import { Comfortaa } from 'next/font/google'
 import './styles/reset.css'
 import './globals.css'
 import { TopBar } from './components/TopBar'
+import { CategoryProvider } from './context/CategoryContext'
 
 const comfortaa = Comfortaa({ subsets: ['latin'] })
 
@@ -19,8 +20,10 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={comfortaa.className}>
-        <TopBar />
-        {children}
+        <CategoryProvider>
+          <TopBar />
+          {children}
+        </CategoryProvider>
       </body>
     </html>
   )
