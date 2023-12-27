@@ -14,7 +14,7 @@ export const TopBar = () => {
   const { category, setCategory } = useContext(CategoryContext)
   const currentCategory = localStorage.getItem('category') || category
 
-  const navItens = ['Home', 'Books', 'Characters', 'Movies', 'Potions', 'Spells']
+  const navItens = ['Home', 'Books', 'Movies']
 
   useEffect(() => {
     // indicatorAnim()
