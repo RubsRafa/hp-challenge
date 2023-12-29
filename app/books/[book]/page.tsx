@@ -20,6 +20,7 @@ const Books = ({ params }: { params: { book: string } }) => {
 
         const chapters = getChapters(params.book)
         setChapters(await chapters)
+        console.log(await chapters)
       } catch (error) {
         console.log(error)
       }
@@ -36,8 +37,8 @@ const Books = ({ params }: { params: { book: string } }) => {
         <div>
           <h2 className={style.book__title}>{bookInfo?.attributes.title}</h2>
           <h3 className={style.book__author}>by {bookInfo?.attributes.author}</h3>
-          <h4>{bookInfo?.attributes.release_date.slice(0, 4)}</h4>
           <p>{bookInfo?.attributes.summary}</p>
+          <h4 className={style.book__release_date}>Originally published: {bookInfo?.attributes.release_date.slice(0, 4)}</h4>
         </div>
       </div>
       <div className={style.book__chapters}>
