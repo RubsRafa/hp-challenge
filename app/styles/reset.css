@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&family=Jolly+Lodger&display=swap');
 *,
 *::before,
 *::after {
@@ -45,7 +44,7 @@ h5,
 h6,
 a,
 span {
-  text-wrap: balance;
+  /* text-wrap: balance; */
   text-size-adjust: auto;
   overflow-wrap: break-word;
   font-size: inherit;
