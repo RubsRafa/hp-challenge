@@ -15,7 +15,7 @@ const BooksContent = () => {
       try {
         const data = getListBooks()
         setBooks(await data)
-        console.log(await data)
+        // console.log(await data)
       } catch (error) {
         console.log(error)
       }

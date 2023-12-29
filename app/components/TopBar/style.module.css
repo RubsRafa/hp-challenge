@@ -77,7 +77,7 @@
   background-color: #f0f0f040;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 56.25rem) {
   .category {
     display: none;
   }
