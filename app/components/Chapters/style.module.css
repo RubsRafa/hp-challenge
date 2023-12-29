@@ -1,22 +1,22 @@
 .chapter__title {
-  /* background-color: rgba(var(--medium--gryffindor), 0.5); */
-  padding: 0;
-  border-top: 1px solid rgba(var(--medium--gryffindor), 0.5);
-  cursor: pointer;
-  background-color: tan;
+  padding-block: 1rem;
+  padding-inline: 0;
+  border-top: 1px solid var(--medium--gryffindor);
+  outline: none;
+  transition: 0.4s;
+}
+
+.chapter__title:hover {
+  background-color: var(--medium--gryffindor);
 }
 
 .chapter__summary {
   width: 100%;
   margin: 0 auto;
   max-height: fit-content;
-  background-color: teal;
   padding: .25rem .5rem 1rem .5rem;
   text-indent: 1.5rem;
-}
 
-.chapter__summary_hide {
-  display: none;
   transition: display 1s ease-in-out;
 }
 
