@@ -1,0 +1,31 @@
+.chapter__title {
+  /* background-color: rgba(var(--medium--gryffindor), 0.5); */
+  padding: 0;
+  border-top: 1px solid rgba(var(--medium--gryffindor), 0.5);
+  cursor: pointer;
+  background-color: tan;
+}
+
+.chapter__summary {
+  width: 100%;
+  margin: 0 auto;
+  max-height: fit-content;
+  background-color: teal;
+  padding: .25rem .5rem 1rem .5rem;
+  text-indent: 1.5rem;
+}
+
+.chapter__summary_hide {
+  display: none;
+  transition: display 1s ease-in-out;
+}
+
+@media (min-width: 56.25rem) {
+  .chapter__title {
+    padding-inline: 2rem;
+    padding-block: 1rem;
+  }
+  .chapter__summary {
+    padding: .25rem 4rem 1rem 4rem;
+  }
+}
