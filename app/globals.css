@@ -5,15 +5,57 @@
   --light--gryffindor: #C43926;
   --lightest--gryffindor: #F2C226;
 
+  /* Slytherin Colors */
+  --dark--slytherin: #0E2B2B;
+  --medium--slytherin: #346735;
+  --light--slytherin: #A9A79C;
+  --lightest--slytherin: #E1E6E2;
+
+  /* Ravenclaw Colors */
+  --dark--ravenclaw: #010D2F;
+  --medium--ravenclaw: #476AA1;
+  --light--ravenclaw: #B2D3F6;
+  --lightest--ravenclaw: #FFD1B2;
+
+  /* Hufflepuff Colors */
+  --dark--hufflepuff: #372E29;
+  --medium--hufflepuff: #716255;
+  --light--hufflepuff: #B99F2E;
+  --lightest--hufflepuff: #EFC75F;
+
   /* Neutral Colors */
   --neutral-white: #FFFFFF;
 }
 
 html,
 body {
-  background-color: var(--dark--gryffindor);
   color: var(--neutral-white);
   font-family: Comfortaa, sans-serif;
+  height: 80dvh;
+}
+
+main {
+  min-height: 100%;
+}
+
+.gryffindor {
+  background-color: var(--dark--gryffindor);
+  transition: background-color .5s ease-in-out;
+}
+
+.slytherin {
+  background-color: var(--dark--slytherin);
+  transition: background-color .5s ease-in-out;
+}
+
+.ravenclaw {
+  background-color: var(--dark--ravenclaw);
+  transition: background-color .5s ease-in-out;
+}
+
+.hufflepuff {
+  background-color: var(--dark--hufflepuff);
+  transition: background-color .5s ease-in-out;
 }
 
 .container {
