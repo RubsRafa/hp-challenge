@@ -2,14 +2,13 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 3rem auto;
+  margin: 0 auto;
   gap: 3rem;
   text-align: center;
-  /* background-color: tan; */
+  padding-top: 3rem;
 }
 
 .book__info div {
-  /* background-color: tan; */
   width: 100%;
 }
 
@@ -41,7 +40,6 @@
 
 .book__release_date {
   margin-top: 4.5rem;
-  /* font-family: 'Jolly Lodger', Comfortaa, sans-serif; */
   text-align: center;
   font-size: .8rem;
 }
