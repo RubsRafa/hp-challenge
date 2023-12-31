@@ -10,6 +10,7 @@ import { HouseContext } from '@/app/context/HouseContext'
 
 const BooksContent = () => {
   const [books, setBooks] = useState<BookType[]>([])
+  const [hover, setHover] = useState<string | null>(null)
   const { house } = useContext(HouseContext)
 
   useEffect(() => {
@@ -29,7 +30,13 @@ const BooksContent = () => {
   return (
     <section className={style.books__section}>
       {books.map((book) =>
-        <div key={book.attributes.title} className={style.book__card}>
+        <div
+          key={book.attributes.title}
+          className={style.book__card}
+          style={{
+            backgroundColor: `var(--medium--${house})`,
+          }}
+        >
           <Image className={style.book__image} src={book.attributes.cover} alt="" width={229} height={354} />
           <div className={style.book_content__card}>
             <h3>{book.attributes.title}</h3>
@@ -37,10 +44,15 @@ const BooksContent = () => {
             <h5>{book.attributes.release_date}</h5>
           </div>
           <Link href={`/books/${book.id}`}>
-            <button className={style.book__read_button}
+            <button
+              className={style.book__read_button}
               style={{
-                backgroundColor: `var(--medium--${house})`
-              }}>
+                backgroundColor: `var(--medium--${house})`,
+                boxShadow: hover === book.id ? `0 .1rem .4rem 0 var(--light--${house})` : ''
+              }}
+              onMouseEnter={() => setHover(book.id)}
+              onMouseLeave={() => setHover(null)}
+            >
               Read
             </button>
           </Link>

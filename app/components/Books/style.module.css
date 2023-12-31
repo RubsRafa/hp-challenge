@@ -9,14 +9,12 @@
 .book__card {
   width: 14.3rem;
   height: 22rem;
-  background-color: var(--medium--gryffindor);
   border-radius: .6rem .6rem 0 0;
   position: relative;
   transition: box-shadow .5s ease-in;
 }
 
 .book__card:hover {
-  box-shadow: 0 .1rem .4rem .0 var(--lightest--gryffindor);
   transition: box-shadow .5s ease-in;
 }
 
@@ -59,14 +57,13 @@
   width: 100%;
   cursor: pointer;
   border: none;
-  /* background-color: var(--lightest--gryffindor); */
+  color: var(--neutral-white);
   border-radius: 0 0 1rem 1rem;
   position: absolute;
   bottom: -1.6rem;
 }
 
 .book__read_button:hover {
-  box-shadow: 0 .1rem .4rem .0 var(--light--gryffindor);
   transition: 
     box-shadow .5s ease-in-out;
 }
