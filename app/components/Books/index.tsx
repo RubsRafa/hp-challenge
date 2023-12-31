@@ -2,13 +2,15 @@
 
 import Image from 'next/image'
 import style from './style.module.css'
-import { useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { getListBooks } from '@/app/services/bookApi'
 import { BookType } from './types'
 import Link from 'next/link'
+import { HouseContext } from '@/app/context/HouseContext'
 
 const BooksContent = () => {
   const [books, setBooks] = useState<BookType[]>([])
+  const { house } = useContext(HouseContext)
 
   useEffect(() => {
     const fetchBooks = async () => {
@@ -35,7 +37,10 @@ const BooksContent = () => {
             <h5>{book.attributes.release_date}</h5>
           </div>
           <Link href={`/books/${book.id}`}>
-            <button className={style.book__read_button}>
+            <button className={style.book__read_button}
+              style={{
+                backgroundColor: `var(--medium--${house})`
+              }}>
               Read
             </button>
           </Link>
