@@ -5,10 +5,12 @@ import { Dispatch, SetStateAction, useState } from "react"
 interface ChaptersProps {
   chapter: ChapterType
   visibleSummary: number | null,
-  setVisibleSummary: Dispatch<SetStateAction<number | null>>
+  setVisibleSummary: Dispatch<SetStateAction<number | null>>,
+  house: string,
 }
 
-export default function Chapters({ chapter, visibleSummary, setVisibleSummary }: ChaptersProps) {
+export default function Chapters({ chapter, visibleSummary, setVisibleSummary, house }: ChaptersProps) {
+  const [hover, setHover] = useState<boolean>(false)
   const isSummaryVisible = chapter.attributes.order === visibleSummary
   return (
     <section>
@@ -16,7 +18,12 @@ export default function Chapters({ chapter, visibleSummary, setVisibleSummary }:
       <h2
         id='chapter_title'
         className={style.chapter__title}
-        style={{ cursor: chapter.attributes.summary == '' && chapter.attributes.summary == null ? 'auto' : 'pointer' }}
+        style={{
+          cursor: chapter.attributes.summary == '' && chapter.attributes.summary == null ? 'auto' : 'pointer',
+          backgroundColor: hover ? `var(--medium--${house})` : 'transparent'
+        }}
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
         onClick={() =>
           setVisibleSummary(isSummaryVisible
             ? null

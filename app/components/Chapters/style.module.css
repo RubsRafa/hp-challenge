@@ -6,10 +6,6 @@
   transition: 0.4s;
 }
 
-.chapter__title:hover {
-  background-color: var(--medium--gryffindor);
-}
-
 .chapter__summary {
   width: 100%;
   margin: 0 auto;
