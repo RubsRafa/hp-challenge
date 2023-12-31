@@ -49,7 +49,13 @@ const Books = ({ params }: { params: { book: string } }) => {
             <em>{bookInfo?.attributes.dedication}</em>
           </h5>
           {chapters?.map((chapter) =>
-            <Chapters key={chapter.attributes.slug} chapter={chapter} visibleSummary={visibleSummary} setVisibleSummary={setVisibleSummary} />
+            <Chapters
+              key={chapter.attributes.slug}
+              chapter={chapter}
+              visibleSummary={visibleSummary}
+              setVisibleSummary={setVisibleSummary}
+              house={house}
+            />
           )}
         </div>
       </section>
