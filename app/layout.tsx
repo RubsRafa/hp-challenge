@@ -4,6 +4,7 @@ import './styles/reset.css'
 import './globals.css'
 import { TopBar } from './components/TopBar'
 import { CategoryProvider } from './context/CategoryContext'
+import { HouseProvider } from './context/HouseContext'
 
 const comfortaa = Comfortaa({ subsets: ['latin'] })
 
@@ -20,10 +21,12 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={comfortaa.className}>
-        <CategoryProvider>
-          <TopBar />
-          {children}
-        </CategoryProvider>
+        <HouseProvider>
+          <CategoryProvider>
+            <TopBar />
+            {children}
+          </CategoryProvider>
+        </HouseProvider>
       </body>
     </html>
   )
