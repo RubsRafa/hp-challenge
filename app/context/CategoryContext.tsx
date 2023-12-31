@@ -2,7 +2,7 @@
 
 import React, { createContext, useState } from "react"
 
-export type Category = 'Home' | 'Books' | 'Movies'
+export type Category = 'Home' | 'Books'
 
 interface CategoryContextProps {
   category: Category,

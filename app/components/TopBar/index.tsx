@@ -13,7 +13,7 @@ export const TopBar = () => {
   const { house } = useContext(HouseContext)
   const currentCategory = localStorage.getItem('category') || category
 
-  const navItens = ['Home', 'Books', 'Movies']
+  const navItens = ['Home', 'Books']
 
   return (
     <nav className={`${house} ${style.nav}`}>
