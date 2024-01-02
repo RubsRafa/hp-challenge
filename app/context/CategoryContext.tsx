@@ -12,7 +12,7 @@ interface CategoryContextProps {
 const getStoredCategory = (): Category => {
   if (typeof window !== 'undefined') {
     const storedCategory = localStorage.getItem('category') as Category
-    console.log(storedCategory)
+    
     return storedCategory || 'Home'
   }
   return 'Home'
@@ -27,7 +27,7 @@ export const CategoryContext = createContext<CategoryContextProps>(initialValue)
 
 export const CategoryProvider = ({ children }: { children: React.ReactNode }) => {
   const [category, setCategory] = useState<Category>(getStoredCategory())
-  console.log(category)
+
   return (
     <CategoryContext.Provider value={{
       category,
