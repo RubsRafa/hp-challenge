@@ -33,31 +33,57 @@ const Books = ({ params }: { params: { book: string } }) => {
   return (
     <main className={`${house}`}>
       <section className={`container`}>
-        <div className={style.book__info}>
-          {bookInfo?.attributes.cover &&
-            <Image className={style.book__image} alt='' src={bookInfo?.attributes.cover} width={388} height={600} />
-          }
-          <div>
-            <h2 className={`title ${style.book__title}`}>{bookInfo?.attributes.title}</h2>
-            <h3 className={style.book__author}>by {bookInfo?.attributes.author}</h3>
-            <p>{bookInfo?.attributes.summary}</p>
-            <h4 className={`normal-text ${style.book__release_date}`}>Originally published: {bookInfo?.attributes.release_date.slice(0, 4)}</h4>
+
+        {!bookInfo &&
+          <div className={style.book__skeleton}>
+            <div className={style.book__image_skeleton} style={{
+              backgroundColor: `var(--medium--${house})`
+            }}></div>
+            <div className={style.book__content_skeleton}>
+              <div className={style.book__title_skeleton} style={{
+                backgroundColor: `var(--medium--${house})`
+              }}></div>
+              <div className={style.book__author_skeleton} style={{
+                backgroundColor: `var(--medium--${house})`
+              }}></div>
+              <div className={style.book__summary_skeleton} style={{
+                backgroundColor: `var(--medium--${house})`
+              }}></div>
+              <div className={style.book__release_date_skeleton} style={{
+                backgroundColor: `var(--medium--${house})`
+              }}></div>
+            </div>
           </div>
-        </div>
-        <div className={style.book__chapters}>
-          <h5>
-            <em>{bookInfo?.attributes.dedication}</em>
-          </h5>
-          {chapters?.map((chapter) =>
-            <Chapters
-              key={chapter.attributes.slug}
-              chapter={chapter}
-              visibleSummary={visibleSummary}
-              setVisibleSummary={setVisibleSummary}
-              house={house}
-            />
-          )}
-        </div>
+        }
+        {bookInfo &&
+          <>
+            <div className={style.book__info}>
+              {bookInfo?.attributes.cover &&
+                <Image className={style.book__image} alt='' src={bookInfo?.attributes.cover} width={388} height={600} />
+              }
+              <div>
+                <h2 className={`title ${style.book__title}`}>{bookInfo?.attributes.title}</h2>
+                <h3 className={style.book__author}>by {bookInfo?.attributes.author}</h3>
+                <p>{bookInfo?.attributes.summary}</p>
+                <h4 className={`normal-text ${style.book__release_date}`}>Originally published: {bookInfo?.attributes.release_date.slice(0, 4)}</h4>
+              </div>
+            </div>
+            <div className={style.book__chapters}>
+              <h5>
+                <em>{bookInfo?.attributes.dedication}</em>
+              </h5>
+              {chapters?.map((chapter) =>
+                <Chapters
+                  key={chapter.attributes.slug}
+                  chapter={chapter}
+                  visibleSummary={visibleSummary}
+                  setVisibleSummary={setVisibleSummary}
+                  house={house}
+                />
+              )}
+            </div>
+          </>
+        }
       </section>
     </main>
   )

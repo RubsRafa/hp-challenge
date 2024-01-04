@@ -1,3 +1,39 @@
+.book__skeleton>* {
+  border-radius: 1rem;
+}
+
+.book__content_skeleton>* {
+  border-radius: 1rem;
+  margin: auto;
+  min-height: 2rem;
+}
+
+.book__image_skeleton {
+  width: 24.25rem;
+  height: 37.5rem;
+  min-width: 5rem;
+}
+
+.book__title_skeleton {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.book__author_skeleton {
+  width: 70%;
+}
+
+.book__summary_skeleton {
+  height: 15rem;
+  margin-bottom: 8rem;
+}
+
+.book__release_date_skeleton {
+  min-width: 10%;
+  max-width: 50%;
+}
+
+.book__skeleton,
 .book__info {
   display: flex;
   flex-wrap: wrap;
@@ -8,6 +44,7 @@
   padding-top: 3rem;
 }
 
+.book__content_skeleton,
 .book__info div {
   width: 100%;
 }
@@ -23,6 +60,7 @@
   font-family: 'Jolly Lodger', Comfortaa, sans-serif;
 }
 
+.book__author_skeleton,
 .book__author {
   margin-bottom: 6rem;
 }
@@ -43,6 +81,7 @@
 }
 
 @media (min-width: 56.25rem) {
+  .book__content_skeleton,
   .book__info div {
     width: 50%;
   }
