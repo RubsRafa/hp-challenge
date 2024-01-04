@@ -16,13 +16,14 @@ export const TopBar = () => {
   const navItens = ['Home', 'Books']
 
   return (
-    <nav className={`${house} ${style.nav}`}>
+    <nav data-cy="nav" className={`${house} ${style.nav}`}>
       <Image src={Logo} alt='' />
       <ul className={style.navbar__itens}>
         {navItens.map((item, index) =>
           <li
             key={item}
             id={index.toString()}
+            data-cy={item}
             onClick={() => {
               setCategory(item as Category)
               localStorage.setItem('category', item)
