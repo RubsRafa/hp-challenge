@@ -99,12 +99,6 @@
   padding-inline: 1.8rem;
   padding-block: .2rem;
   cursor: pointer;
-  border-block: 1px solid rgba(255, 255, 255, 0.5);
-  transition: font-size .3s ease-in-out;
+  border-block: 1px solid var(--neutral-gray--light);
   background-color: inherit;
-}
-
-.sort_house button:hover {
-  font-size: var(--fs-2);
-  transition: font-size .3s ease-in-out;
 }
