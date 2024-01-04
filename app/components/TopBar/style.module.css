@@ -6,7 +6,7 @@
   width: 100%;
   height: 7.7rem;
 
-  box-shadow: 0 .225rem 2.125rem 0 rgba(120, 246, 255, 0.5);
+  box-shadow: 0 .225rem 2.125rem 0 var(--neutral-gray--light);
 
   object-fit: cover;
   object-position: 10% 35%;
@@ -38,7 +38,7 @@
 
 .navbar__itens li:hover {
   cursor: pointer;
-  color: var(--lightest--gryffindor);
+  color: var(--neutral-gray);
 }
 
 .divisor {
@@ -46,7 +46,7 @@
   margin-top: 1rem;
   width: 90%;
   height: 1px;
-  background-color: #f0f0f040;
+  background-color: var(--neutral-gray--light);
 }
 
 @media (min-width: 56.25rem) {

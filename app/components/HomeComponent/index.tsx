@@ -31,14 +31,13 @@ export default function HomeComponent() {
     return
   }
   return (
-    <div>
+    <section data-cy="home_page">
       <div className={style.houses}>
-        <h2>Choose your house!</h2>
+        <h2 className='title--small'>Choose your house!</h2>
         <ul>
           {houses.map((house, index) => (
             <li
               key={house}
-              // className={`${house.toLowerCase()}`}
               style={{
                 backgroundColor: `var(--medium--${house.toLowerCase()})`,
                 border: `2px solid var(--lightest--${house.toLowerCase()})`,
@@ -54,7 +53,7 @@ export default function HomeComponent() {
         </ul>
       </div>
       <div className={style.sort_house}>
-        <h2>Or let the Sorting Hat decide for you!</h2>
+        <h2 className='title--extra-small'>Or let the Sorting Hat decide for you!</h2>
         <div className={style.center}>
           <div className={style.balloon}>
             <span className={sort ? style.show : style.hidden}>{sortingHatPhrases[house]}</span>
@@ -66,6 +65,6 @@ export default function HomeComponent() {
         </div>
         <button onClick={sortHouse}>Sort Me</button>
       </div>
-    </div>
+    </section>
   )
 }

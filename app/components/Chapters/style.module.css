@@ -1,7 +1,7 @@
 .chapter__title {
   padding-block: 1rem;
   padding-inline: 0;
-  border-top: 1px solid var(--medium--gryffindor);
+  border-top: 1px solid var(--neutral-gray);
   outline: none;
   transition: 0.4s;
 }

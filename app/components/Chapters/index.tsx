@@ -17,7 +17,7 @@ export default function Chapters({ chapter, visibleSummary, setVisibleSummary, h
 
       <h2
         id='chapter_title'
-        className={style.chapter__title}
+        className={`normal-text ${style.chapter__title}`}
         style={{
           cursor: chapter.attributes.summary == '' && chapter.attributes.summary == null ? 'auto' : 'pointer',
           backgroundColor: hover ? `var(--medium--${house})` : 'transparent'
@@ -32,7 +32,7 @@ export default function Chapters({ chapter, visibleSummary, setVisibleSummary, h
 
       {chapter.attributes.summary !== '' && chapter.attributes.summary !== null &&
         <div
-          className={style.chapter__summary}
+          className={`normal-text ${style.chapter__summary}`}
           style={{ display: isSummaryVisible ? 'block' : 'none' }}
         >{chapter.attributes.summary}</div>
       }

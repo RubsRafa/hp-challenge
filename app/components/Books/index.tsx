@@ -39,9 +39,9 @@ const BooksContent = () => {
         >
           <Image className={style.book__image} src={book.attributes.cover} alt="" width={229} height={354} />
           <div className={style.book_content__card}>
-            <h3>{book.attributes.title}</h3>
-            <h5>{book.attributes.author}</h5>
-            <h5>{book.attributes.release_date}</h5>
+            <h3 className='title--extra-small'>{book.attributes.title}</h3>
+            <h5 className='normal-text'>{book.attributes.author}</h5>
+            <h5 className='normal-text'>{book.attributes.release_date}</h5>
           </div>
           <Link href={`/books/${book.id}`}>
             <button

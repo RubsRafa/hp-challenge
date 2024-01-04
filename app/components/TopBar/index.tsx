@@ -9,6 +9,7 @@ import { HouseContext } from '@/app/context/HouseContext'
 
 export const TopBar = () => {
   const [showMenu, setShowMenu] = useState<boolean>(false)
+  const [hover, setHover] = useState<string | null>('')
   const { category, setCategory } = useContext(CategoryContext)
   const { house } = useContext(HouseContext)
   const currentCategory = localStorage.getItem('category') || category
@@ -24,6 +25,8 @@ export const TopBar = () => {
             key={item}
             id={index.toString()}
             data-cy={item}
+            onMouseEnter={() => setHover(item)}
+            onMouseLeave={() => setHover(null)}
             onClick={() => {
               setCategory(item as Category)
               localStorage.setItem('category', item)
@@ -32,7 +35,7 @@ export const TopBar = () => {
             className={(currentCategory == item && !showMenu) ? style.current_category : ''}
             style={{
               borderBottom: currentCategory == item ? `1px solid var(--lightest--${house})` : '',
-              color: currentCategory == item ? `var(--lightest--${house})` : 'var(--neutral-white)'
+              color: (currentCategory == item || hover == item) ? `var(--lightest--${house})` : 'var(--neutral-white)',
             }}
           ><Link href={`/${item === 'Home' ? '' : item.toLowerCase()}`}>{item}</Link></li>
         )}

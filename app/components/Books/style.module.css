@@ -39,14 +39,12 @@
 .book_content__card h3 {
   padding-inline: 1rem;
   padding-block: 1rem;
-  font-size: 1.125rem;
-  border-block: 10px double rgba(255, 255, 255, 0.2);
+  border-block: 10px double var(--neutral-gray);
 }
 
 .book_content__card h5 {
   text-align: center;
   margin-top: .8rem;
-  font-size: .8rem;
 }
 
 .book_content__card h5:last-child {

@@ -38,10 +38,10 @@ const Books = ({ params }: { params: { book: string } }) => {
             <Image className={style.book__image} alt='' src={bookInfo?.attributes.cover} width={388} height={600} />
           }
           <div>
-            <h2 className={style.book__title}>{bookInfo?.attributes.title}</h2>
+            <h2 className={`title ${style.book__title}`}>{bookInfo?.attributes.title}</h2>
             <h3 className={style.book__author}>by {bookInfo?.attributes.author}</h3>
             <p>{bookInfo?.attributes.summary}</p>
-            <h4 className={style.book__release_date}>Originally published: {bookInfo?.attributes.release_date.slice(0, 4)}</h4>
+            <h4 className={`normal-text ${style.book__release_date}`}>Originally published: {bookInfo?.attributes.release_date.slice(0, 4)}</h4>
           </div>
         </div>
         <div className={style.book__chapters}>
