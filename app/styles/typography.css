@@ -1,0 +1,39 @@
+:root{
+  /* Font-sizes */
+  --fs-1: .8rem;
+  --fs-2: 1rem;
+  --fs-3: 1.5rem;
+  --fs-4: 2rem;
+  --fs-5: 2.5rem;
+}
+
+.title {
+  font-size: var(--fs-4);
+}
+
+.title--small {
+  font-size: var(--fs-3);
+}
+
+.title--extra-small {
+  font-size: var(--fs-2);
+}
+
+.normal-text {
+  font-size: var(--fs-1);
+}
+
+@media (min-width: 56.25rem) {
+  .title {
+    font-size: var(--fs-5);
+  }
+  .title--small {
+    font-size: var(--fs-4);
+  }
+  .title--extra-small {
+    font-size: var(--fs-3);
+  }
+  .normal-text {
+    font-size: var(--fs-2);
+  }
+}

@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Comfortaa } from 'next/font/google'
 import './styles/reset.css'
+import './styles/colors.css'
+import './styles/typography.css'
 import './globals.css'
 import { TopBar } from './components/TopBar'
 import { CategoryProvider } from './context/CategoryContext'
