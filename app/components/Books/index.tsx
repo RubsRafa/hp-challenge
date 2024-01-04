@@ -12,6 +12,7 @@ const BooksContent = () => {
   const [books, setBooks] = useState<BookType[]>([])
   const [hover, setHover] = useState<string | null>(null)
   const { house } = useContext(HouseContext)
+  const list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
   useEffect(() => {
     const fetchBooks = async () => {
@@ -29,6 +30,13 @@ const BooksContent = () => {
 
   return (
     <section className={style.books__section}>
+      {!books[0] &&
+        list.map((item) =>
+          <div key={item} className={style.book__card_skeleton} style={{
+            backgroundColor: `var(--medium--${house})`
+          }}></div>
+        )
+      }
       {books.map((book) =>
         <div
           key={book.attributes.title}

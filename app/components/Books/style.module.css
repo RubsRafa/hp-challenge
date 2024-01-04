@@ -6,6 +6,13 @@
   padding-top: 2rem;
 }
 
+.book__card_skeleton {
+  width: 14.3rem;
+  height: 23.2rem;
+  border-radius: .6rem;
+  
+}
+
 .book__card {
   width: 14.3rem;
   height: 22rem;
@@ -67,25 +74,25 @@
 }
 
 
-@media (min-width: 580px) {
+@media (min-width: 36.25rem) {
   .books__section {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (min-width: 900px) {
+@media (min-width: 56.25rem) {
   .books__section {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-@media (min-width: 1160px) {
+@media (min-width: 72.5rem) {
   .books__section {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
-@media (min-width: 1700px) {
+@media (min-width: 106.25rem) {
   .books__section {
     grid-template-columns: repeat(5, 1fr);
   }
