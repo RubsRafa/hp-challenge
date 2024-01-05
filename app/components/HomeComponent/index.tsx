@@ -38,6 +38,7 @@ export default function HomeComponent() {
           {houses.map((house, index) => (
             <li
               key={house}
+              data-cy={house}
               style={{
                 backgroundColor: `var(--medium--${house.toLowerCase()})`,
                 border: `2px solid var(--lightest--${house.toLowerCase()})`,
@@ -55,15 +56,15 @@ export default function HomeComponent() {
       <div className={style.sort_house}>
         <h2 className='title--extra-small'>Or let the Sorting Hat decide for you!</h2>
         <div className={style.center}>
-          <div className={style.balloon}>
+          <div data-cy="balloon_phrase" className={style.balloon}>
             <span className={sort ? style.show : style.hidden}>{sortingHatPhrases[house]}</span>
             <div className={style.triangle} style={{
               display: sort ? 'block' : 'none'
             }}></div>
           </div>
-          <Image className={sort ? style.show : style.hidden} src={SortingHat} alt={`${house} house image`} width={421} height={421} />
+          <Image data-cy="sorting_hat" className={sort ? style.show : style.hidden} src={SortingHat} alt={`${house} house image`} width={421} height={421} />
         </div>
-        <button onClick={sortHouse}>Sort Me</button>
+        <button data-cy="sort_button" onClick={sortHouse}>Sort Me</button>
       </div>
     </section>
   )
