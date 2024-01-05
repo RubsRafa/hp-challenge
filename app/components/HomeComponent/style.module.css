@@ -4,6 +4,7 @@
 
 .houses h2 {
   margin-bottom: 1.2rem;
+
   padding-top: 1.5rem;
 }
 
@@ -12,32 +13,40 @@
   flex-wrap: wrap;
   justify-content: space-around;
   gap: 1rem;
-  list-style-type: none;
+
   padding: 0;
+
+  list-style-type: none;
 }
 
 .houses li {
-  max-height: auto;
-  border-radius: .6rem;
+  max-height: fit-content;
+  
   padding-block: .4rem;
   padding-inline: 1.8rem;
+  
+  border-radius: .6rem;
+
   transition: box-shadow .3s ease-in-out;
-  max-height: fit-content;
 }
 
 .houses li:hover {
   box-shadow: 0 0 1rem .01rem var(--neutral-white);
+
   transition: box-shadow .3s ease-in-out;
 }
 
 .houses img {
   margin: 0 auto;
+
   object-fit: contain;
 }
 
 .sort_house {
   margin: auto;
+
   justify-items: center;
+
   text-align: center;
 }
 
@@ -46,25 +55,31 @@
 }
 
 .sort_house img {
-  margin: auto;
   width: fit-content;
   height: fit-content;
+
+  margin: auto;
+
   object-fit: contain;
+
   transition: display .4s ease-in-out;
 }
 
 .center {
   margin-top: 3rem;
+
   flex-direction: column;
 }
 
 .show {
   display: block;
+
   transition: display .4s ease-in-out;
 }
 
 .hidden {
   display: none;
+
   transition: display .4s ease-in-out;
 }
 
@@ -74,31 +89,40 @@
 }
 
 .balloon span {
-  background-color: var(--neutral-white);
-  color: black;
   padding-inline: 2.5rem;
   padding-block: .5rem;
+
   border-radius: 15px;
+  
+  color: var(--neutral-black);
+  background-color: var(--neutral-white);
+  
   transition: display .4s ease-in-out;
 }
 
 .triangle {
   width: 0; 
   height: 0; 
+
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-top: 25px solid var(--neutral-white);
+  
   align-self: center;
+  
   transition: display .4s ease-in-out;
 }
 
 .sort_house button {
   margin-block: 2rem 4rem;
-  color: var(--neutral-white);
-  border: none;
   padding-inline: 1.8rem;
   padding-block: .2rem;
-  cursor: pointer;
+  
+  border: none;
   border-block: 1px solid var(--neutral-gray--light);
+  
+  color: var(--neutral-white);
   background-color: inherit;
+  
+  cursor: pointer;
 }

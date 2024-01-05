@@ -1,16 +1,21 @@
 .chapter__title {
-  padding-block: 1rem;
   padding-inline: 0;
+  padding-block: 1rem;
+  
   border-top: 1px solid var(--neutral-gray);
+  
   outline: none;
+
   transition: 0.4s;
 }
 
 .chapter__summary {
   width: 100%;
-  margin: 0 auto;
   max-height: fit-content;
+  
+  margin: 0 auto;
   padding: .25rem .5rem 1rem .5rem;
+  
   text-indent: 1.5rem;
 
   transition: display 1s ease-in-out;

@@ -2,22 +2,27 @@
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-row-gap: 3rem;
+
   justify-items: center;
+  
   padding-top: 2rem;
 }
 
 .book__card_skeleton {
   width: 14.3rem;
   height: 23.2rem;
+
   border-radius: .6rem;
-  
 }
 
 .book__card {
   width: 14.3rem;
   height: 22rem;
+
   border-radius: .6rem .6rem 0 0;
+  
   position: relative;
+  
   transition: box-shadow .5s ease-in;
 }
 
@@ -26,32 +31,38 @@
 }
 
 .book__image {
-  position: absolute;
   border-radius: .6rem .6rem 0 0;
+
+  position: absolute;
+  
   transition: opacity 1s ease-in-out;
 }
 
 .book__image:hover {
   opacity: 0;
+  
   transition: 
     opacity 0.5s ease-out;
 }
 
 .book_content__card {
-  padding-inline: 1rem;
   margin-top: 3rem;
+  padding-inline: 1rem;
+  
   text-align: center;
 }
 
 .book_content__card h3 {
   padding-inline: 1rem;
   padding-block: 1rem;
+
   border-block: 10px double var(--neutral-gray);
 }
 
 .book_content__card h5 {
-  text-align: center;
   margin-top: .8rem;
+
+  text-align: center;
 }
 
 .book_content__card h5:last-child {
@@ -60,10 +71,14 @@
 
 .book__read_button {
   width: 100%;
-  cursor: pointer;
+
   border: none;
-  color: var(--neutral-white);
   border-radius: 0 0 1rem 1rem;
+  
+  cursor: pointer;
+  
+  color: var(--neutral-white);
+  
   position: absolute;
   bottom: -1.6rem;
 }

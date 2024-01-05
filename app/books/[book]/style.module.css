@@ -3,19 +3,23 @@
 }
 
 .book__content_skeleton>* {
-  border-radius: 1rem;
-  margin: auto;
   min-height: 2rem;
+  
+  margin: auto;
+
+  border-radius: 1rem;
 }
 
 .book__image_skeleton {
   width: 24.25rem;
-  height: 37.5rem;
   min-width: 5rem;
+  height: 37.5rem;
+  
 }
 
 .book__title_skeleton {
   width: 100%;
+  
   margin-bottom: 1rem;
 }
 
@@ -25,6 +29,7 @@
 
 .book__summary_skeleton {
   height: 15rem;
+  
   margin-bottom: 8rem;
 }
 
@@ -35,13 +40,15 @@
 
 .book__skeleton,
 .book__info {
+  margin: 0 auto;
+
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin: 0 auto;
   gap: 3rem;
-  text-align: center;
   padding-top: 3rem;
+  
+  text-align: center;
 }
 
 .book__content_skeleton,
@@ -50,9 +57,11 @@
 }
 
 .book__image {
-  border-radius: 1rem;
-  object-fit: contain;
   height: fit-content;
+
+  border-radius: 1rem;
+
+  object-fit: contain;
 }
 
 .book__title {
@@ -71,12 +80,14 @@
 }
 
 .book__chapters h5 {
-  text-align: center;
   margin-block: 4rem 2rem;
+
+  text-align: center;
 }
 
 .book__release_date {
   margin-top: 4.5rem;
+  
   text-align: center;
 }
 
