@@ -34,7 +34,9 @@ const Books = ({ params }: { params: { book: string } }) => {
       <section className={`container`}>
 
         {!bookInfo &&
-          <div className={style.book__skeleton}>
+          <div
+            data-cy="book_skeleton"
+            className={style.book__skeleton}>
             <div className={style.book__image_skeleton} style={{
               backgroundColor: `var(--medium--${house})`
             }}></div>
@@ -56,19 +58,21 @@ const Books = ({ params }: { params: { book: string } }) => {
         }
         {bookInfo &&
           <>
-            <div className={style.book__info}>
+            <div
+              data-cy="book_info"
+            className={style.book__info}>
               {bookInfo?.attributes.cover &&
                 <Image className={style.book__image} alt='' src={bookInfo?.attributes.cover} width={388} height={600} />
               }
               <div>
-                <h2 className={`title ${style.book__title}`}>{bookInfo?.attributes.title}</h2>
-                <h3 className={style.book__author}>by {bookInfo?.attributes.author}</h3>
-                <p>{bookInfo?.attributes.summary}</p>
-                <h4 className={`normal-text ${style.book__release_date}`}>Originally published: {bookInfo?.attributes.release_date.slice(0, 4)}</h4>
+                <h2 data-cy="book_title" className={`title ${style.book__title}`}>{bookInfo?.attributes.title}</h2>
+                <h3 data-cy="book_author" className={style.book__author}>by {bookInfo?.attributes.author}</h3>
+                <p data-cy="book_summary">{bookInfo?.attributes.summary}</p>
+                <h4 data-cy="book_release_date" className={`normal-text ${style.book__release_date}`}>Originally published: {bookInfo?.attributes.release_date.slice(0, 4)}</h4>
               </div>
             </div>
-            <div className={style.book__chapters}>
-              <h5>
+            <div data-cy="book_chapters" className={style.book__chapters}>
+              <h5 data-cy="book_dedication">
                 <em>{bookInfo?.attributes.dedication}</em>
               </h5>
               {chapters?.map((chapter) =>

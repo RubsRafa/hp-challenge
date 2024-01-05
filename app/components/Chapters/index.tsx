@@ -17,6 +17,7 @@ export default function Chapters({ chapter, visibleSummary, setVisibleSummary, h
 
       <h2
         id='chapter_title'
+        data-cy="chapter"
         className={`normal-text ${style.chapter__title}`}
         style={{
           cursor: chapter.attributes.summary == '' && chapter.attributes.summary == null ? 'auto' : 'pointer',

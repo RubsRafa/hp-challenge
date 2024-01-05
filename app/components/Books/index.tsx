@@ -31,14 +31,19 @@ const BooksContent = () => {
     <section className={style.books__section}>
       {!books[0] &&
         list.map((item) =>
-          <div key={item} className={style.book__card_skeleton} style={{
-            backgroundColor: `var(--medium--${house})`
-          }}></div>
+          <div
+            key={item}
+            data-cy="book_card_skeleton"
+            className={style.book__card_skeleton}
+            style={{
+              backgroundColor: `var(--medium--${house})`
+            }}></div>
         )
       }
       {books[0] && books.map((book) =>
         <div
           key={book.attributes.title}
+          data-cy="book_card"
           className={style.book__card}
           style={{
             backgroundColor: `var(--medium--${house})`,
