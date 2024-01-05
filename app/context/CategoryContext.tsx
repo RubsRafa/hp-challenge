@@ -10,7 +10,7 @@ interface CategoryContextProps {
 }
 
 const getStoredCategory = (): Category => {
-  if (typeof window !== 'undefined') {
+  if (typeof window !== 'undefined' && window.localStorage) {
     const storedCategory = localStorage.getItem('category') as Category
     
     return storedCategory || 'Home'

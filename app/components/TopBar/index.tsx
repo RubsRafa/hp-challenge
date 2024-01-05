@@ -12,7 +12,6 @@ export const TopBar = () => {
   const [hover, setHover] = useState<string | null>('')
   const { category, setCategory } = useContext(CategoryContext)
   const { house } = useContext(HouseContext)
-  const currentCategory = localStorage.getItem('category') || category
 
   const navItens = ['Home', 'Books']
 
@@ -29,13 +28,12 @@ export const TopBar = () => {
             onMouseLeave={() => setHover(null)}
             onClick={() => {
               setCategory(item as Category)
-              localStorage.setItem('category', item)
               setShowMenu(false)
             }}
-            className={(currentCategory == item && !showMenu) ? style.current_category : ''}
+            className={(category == item && !showMenu) ? style.current_category : ''}
             style={{
-              borderBottom: currentCategory == item ? `1px solid var(--lightest--${house})` : '',
-              color: (currentCategory == item || hover == item) ? `var(--lightest--${house})` : 'var(--neutral-white)',
+              borderBottom: category == item ? `1px solid var(--lightest--${house})` : '',
+              color: (category == item || hover == item) ? `var(--lightest--${house})` : 'var(--neutral-white)',
             }}
           ><Link href={`/${item === 'Home' ? '' : item.toLowerCase()}`}>{item}</Link></li>
         )}

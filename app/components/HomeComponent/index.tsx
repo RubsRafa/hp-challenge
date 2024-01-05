@@ -44,7 +44,6 @@ export default function HomeComponent() {
                 border: `2px solid var(--lightest--${house.toLowerCase()})`,
               }}
               onClick={() => {
-                localStorage.setItem('house', house.toLowerCase())
                 setHouse(house.toLowerCase() as House)
                 setSort(false)
               }}>

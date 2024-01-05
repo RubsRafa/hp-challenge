@@ -10,7 +10,7 @@ interface HouseContextProps {
 }
 
 const getStoredHouse = (): House => {
-  if (typeof window !== 'undefined') {
+  if (typeof window !== 'undefined'  && window.localStorage) {
     const storedHouse = localStorage.getItem('house') as House
     return storedHouse || 'gryffindor'
   }
