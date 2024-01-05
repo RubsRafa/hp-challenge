@@ -22,7 +22,6 @@ const Books = ({ params }: { params: { book: string } }) => {
 
         const chapters = getChapters(params.book)
         setChapters(await chapters)
-        console.log(await chapters)
       } catch (error) {
         console.log(error)
       }

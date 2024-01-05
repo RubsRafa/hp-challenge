@@ -19,7 +19,6 @@ const BooksContent = () => {
       try {
         const data = getListBooks()
         setBooks(await data)
-        // console.log(await data)
       } catch (error) {
         console.log(error)
       }
@@ -37,7 +36,7 @@ const BooksContent = () => {
           }}></div>
         )
       }
-      {books.map((book) =>
+      {books[0] && books.map((book) =>
         <div
           key={book.attributes.title}
           className={style.book__card}
