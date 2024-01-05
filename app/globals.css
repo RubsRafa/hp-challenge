@@ -1,8 +1,9 @@
 html,
 body {
+  height: 100%;
+  
   color: var(--neutral-white);
   font-family: Comfortaa, sans-serif;
-  height: 80dvh;
 }
 
 main {
@@ -10,6 +11,20 @@ main {
 }
 
 .container {
-  margin: auto;
   max-width: 90%;
+  
+  margin: auto;
 }
+
+::-webkit-scrollbar {
+  width: .8rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--neutral-gray--light);
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--neutral-black);
+}
+
